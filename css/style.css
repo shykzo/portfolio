@@ -58,3 +58,40 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--signal); outlin
 
 footer { padding-block: 28px 40px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: .78rem; color: var(--muted); }
 
+/* hero */
+.hero {
+  display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: center;
+  padding-block: 56px 48px;
+}
+.photo {
+  width: 220px; max-width: 100%; aspect-ratio: 1; border-radius: 50%;
+  object-fit: cover; border: 6px solid var(--accent-soft);
+}
+.hero h1 {
+  font-family: var(--display); font-stretch: 125%; font-weight: 800;
+  font-size: clamp(2.3rem, 6vw, 3.9rem); line-height: .98; letter-spacing: -.01em;
+  margin: 0 0 16px; color: var(--accent); text-wrap: balance;
+}
+.hero h1 span { display: block; color: var(--fg); }
+.role { font-size: 1.12rem; font-weight: 500; margin: 0 0 18px; max-width: 46ch; }
+.status {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--mono); font-size: .82rem;
+  padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface);
+}
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--signal); }
+.hero-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+.btn {
+  font-family: var(--mono); font-size: .85rem; text-decoration: none;
+  padding: 9px 16px; border-radius: 6px; border: 1px solid var(--accent); color: var(--accent);
+}
+.btn.solid { background: var(--accent); color: var(--bg); }
+.btn:hover { background: var(--accent-soft); color: var(--accent); }
+
+section { padding-block: 44px; border-top: 1px solid var(--line); }
+h2 {
+  font-family: var(--display); font-stretch: 112%; font-weight: 700;
+  font-size: 1.7rem; margin: 0 0 24px; text-wrap: balance;
+}
+.about p { max-width: 65ch; margin: 0 0 12px; }
+
