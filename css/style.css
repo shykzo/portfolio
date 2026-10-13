@@ -118,3 +118,22 @@ h2 {
 .k-bg { fill: var(--accent-soft); } .k-a { fill: var(--accent); } .k-s { fill: var(--signal); }
 .k-f { fill: var(--surface); } .k-l2 { fill: var(--line); }
 
+/* timeline */
+.cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+.cols h3, .skills h3 { font-family: var(--mono); font-size: .8rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+.tl { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; border-left: 2px solid var(--line); }
+.tl li { padding-left: 20px; position: relative; min-width: 0; }
+.tl li::before { content: ""; position: absolute; left: -7px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); }
+.when { font-family: var(--mono); font-size: .78rem; color: var(--signal); font-variant-numeric: tabular-nums; }
+.tl strong { display: block; font-weight: 600; }
+.tl span.sub { color: var(--muted); font-size: .94rem; }
+
+/* skills */
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--mono); font-size: .84rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+.lang { display: grid; gap: 8px; }
+.lang div { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px dashed var(--line); padding-bottom: 6px; }
+.lang b { font-weight: 500; }
+.lang em { font-style: normal; font-family: var(--mono); font-size: .84rem; color: var(--accent); }
+
