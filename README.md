@@ -1,5 +1,7 @@
 # Portfolio — Victor Kono-Manetti
 
+**En ligne : https://victor-kono-manetti.vercel.app**
+
 Portfolio personnel d'étudiant en **Bachelor Informatique à Ynov Toulouse** (spécialisation cybersécurité), en recherche de stage 2026-2027 en cybersécurité / infrastructure.
 
 ## Contenu
