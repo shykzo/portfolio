@@ -1,0 +1,60 @@
+/* Reset minimal */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+img { max-width: 100%; }
+
+/* Layout: one column, shell-prompt eyebrows per section, hero split photo/identity, projects as a two-column log of repos */
+:root {
+  --bg: #F2F5F3;
+  --surface: #FFFFFF;
+  --fg: #16231E;
+  --muted: #5A6B64;
+  --line: #D5DED9;
+  --accent: #2F5D50;
+  --accent-soft: #DCE8E1;
+  --signal: #B5651D;
+  --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1714; --surface: #16211D; --fg: #E4ECE8; --muted: #93A49C;
+    --line: #26352F; --accent: #8FC2AA; --accent-soft: #1E2E28; --signal: #E3A35E;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1714; --surface: #16211D; --fg: #E4ECE8; --muted: #93A49C;
+  --line: #26352F; --accent: #8FC2AA; --accent-soft: #1E2E28; --signal: #E3A35E;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--body); font-size: 1rem; line-height: 1.6;
+  padding-inline: 20px; padding-block: 0;
+}
+.wrap { max-width: 960px; margin-inline: auto; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; border-radius: 4px; }
+
+/* top bar */
+.bar {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding-block: 18px; border-bottom: 1px solid var(--line);
+  font-family: var(--mono); font-size: .8rem; color: var(--muted);
+}
+.bar nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.bar nav a { color: var(--muted); text-decoration: none; }
+.bar nav a:hover { color: var(--accent); }
+
+/* prompt eyebrow */
+.prompt { font-family: var(--mono); font-size: .82rem; color: var(--muted); margin: 0 0 14px; }
+.prompt .u { color: var(--accent); }
+.prompt .p { color: var(--signal); }
+
+
+footer { padding-block: 28px 40px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: .78rem; color: var(--muted); }
+
